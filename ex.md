@@ -51,3 +51,45 @@ const deleteNull = (arr) => {
   return result;
 };
 ```
+**5. Написать функцию, которая принимает массив из 10 чисел и возвращает строку этих чисел в форме телефонного номера (2 варианта).** <br>
+```javascript
+function createPhoneNumber(numbers) {
+  var format = "(xxx) xxx-xxxx";  
+  for(var i = 0; i < numbers.length; i++) {
+    format = format.replace('x', numbers[i]);
+  }
+  
+  return format;
+}
+
+function createPhoneNumber(numbers) {
+  let region = numbers.slice(0, 3).join('');
+  let middleNumbers = numbers.slice(3, 6).join('');
+  let lastNumbers = numbers.slice(6, 10).join('');
+  return `(${region}) ${middleNumbers}-${lastNumbers}`
+}
+```
+**6. Написать функцию, которая принимать на вход строку и возвращает reverse версию ('kebab' => 'babek')** <br>
+```javascript
+function solution(str) {
+  return str.split('').reverse().join('')
+}
+```
+**7. Написать функцию, которая принимать на вход число и заменяют любую цифру < 5 на 0, а цифру > 5 на 1 ('kebab' => 'babek')** <br>
+```javascript
+function replace(x){
+  return x.split('').map((num) => num > 4 ? 1 : 0).join('');
+}
+```
+**8. Найти наименьшее число в массиве ** <br>
+```javascript
+function min(arr){
+  return Math.min(...arr)
+}
+```
+**9. Первый символ к верхнему регистру ** <br>
+```javascript
+function capitalize(str){
+  return str[0].toUpperCase() + str.slice(1)
+}
+```
