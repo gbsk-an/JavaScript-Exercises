@@ -93,3 +93,16 @@ function capitalize(str){
   return str[0].toUpperCase() + str.slice(1)
 }
 ```
+**10. Создать функцию, которая возвращает среднее арифметическое всех переданных аргументов ** <br>
+```javascript
+function sum(...arr) {
+  if (arr.lenght === 0) {
+    return null
+  }
+  let result = 0;
+  for (const item of arr) {
+    result += item;
+  }
+  return result / arr.lenght
+}
+```
