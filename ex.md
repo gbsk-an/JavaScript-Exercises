@@ -106,3 +106,34 @@ function sum(...arr) {
   return result / arr.lenght
 }
 ```
+**11. Реализуйте функцию, которая генерирует HTML список определений (теги \<dl>, \<dt> и \<dd>) и возвращает получившуюся строку.** <br>
+```javascript
+function buildDefinitionList(arr) {
+  if (arr.length === 0) return '';
+  const parts = [];
+
+  for (const item of arr) {
+    parts.push(`<dt>${item[0]}</dt><dd>${item[1]}</dd>`);
+  }
+
+  const innerValue = parts.join('');
+  const result = `<dl>${innerValue}</dl>`;
+  return result;
+}
+```
+**12. Сравнение двух массивов и вывод уникальных значений ** <br>
+```javascript
+function count(arr, arr2) {
+const result = [];
+for (const item of arr) {
+  for (const item2 of arr2) {
+    if (item === item2) {
+      result.push(item);
+    }
+  }
+}
+
+  const res = _.uniq(result);
+  return res.length;
+}
+```
