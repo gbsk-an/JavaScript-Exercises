@@ -81,19 +81,19 @@ function replace(x){
   return x.split('').map((num) => num > 4 ? 1 : 0).join('');
 }
 ```
-**8. Найти наименьшее число в массиве ** <br>
+**8. Найти наименьшее число в массиве** <br>
 ```javascript
 function min(arr){
   return Math.min(...arr)
 }
 ```
-**9. Первый символ к верхнему регистру ** <br>
+**9. Первый символ к верхнему регистру** <br>
 ```javascript
 function capitalize(str){
   return str[0].toUpperCase() + str.slice(1)
 }
 ```
-**10. Создать функцию, которая возвращает среднее арифметическое всех переданных аргументов ** <br>
+**10. Создать функцию, которая возвращает среднее арифметическое всех переданных аргументов** <br>
 ```javascript
 function sum(...arr) {
   if (arr.lenght === 0) {
@@ -121,7 +121,7 @@ function buildDefinitionList(arr) {
   return result;
 }
 ```
-**12. Сравнение двух массивов и вывод уникальных значений ** <br>
+**12. Сравнение двух массивов и вывод уникальных значений** <br>
 ```javascript
 function count(arr, arr2) {
 const result = [];
@@ -136,4 +136,48 @@ for (const item of arr) {
   const res = _.uniq(result);
   return res.length;
 }
+```
+**13. Привести строку к верхнему регистру через map** <br>
+```javascript
+function makeUpperCase(str) {
+return str.split('').map(el => el.toUpperCase()).join('')
+}
+```
+**14. Вычислить сумму положительных чисел массива** <br>
+```javascript
+function positiveSum(arr) {
+   return arr.reduce((a,b)=> a + (b > 0 ? b : 0),0);
+}
+```
+```javascript
+function positiveSum(arr) {
+  let result = 0;
+  for (const item of arr) {
+    if (item > 0) {
+      result += item;
+    }
+  }
+  return result
+}
+```
+**15. Заменить строку на символ ('text', '%' => '%%%%')** <br>
+```javascript
+function contamination(text, char){
+  if (text.length === 0 || char.length === 0) return "";
+  const arr = text.split('');
+  const newchar = char.split('');
+  const newArr = arr.map(el => newchar);
+  return newArr.join('')
+}
+```
+**16. Создать функцию, которая возвращает массив целых чисел от n до 1, где n > 0** <br>
+```javascript
+const reverseSeq = n => {
+  const arr = [];
+  for (let i = n; i > 0; i--) {
+    arr.push(i);
+  }
+  
+  return arr
+};
 ```
