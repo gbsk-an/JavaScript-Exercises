@@ -181,3 +181,9 @@ const reverseSeq = n => {
   return arr
 };
 ```
+**17. Преобразовать числа в символы** <br>
+```javascript
+const ArrowFunc = function(arr) {
+  return arr.map(el =>String.fromCharCode(el)).join(''); 
+}
+```
