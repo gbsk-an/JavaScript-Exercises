@@ -187,3 +187,76 @@ const ArrowFunc = function(arr) {
   return arr.map(el =>String.fromCharCode(el)).join(''); 
 }
 ```
+**18. Убрать все повторяющиеся значения  вмассиве и sort по частоте повторений** <br>
+```javascript
+const fn = (array) => {
+const result = [];
+  const unique = array.reduce((acc, cur) => {
+    acc[cur] = (acc[cur] || 0) + 1;
+    return acc;
+  ,{})
+  const keys = Object.keys(unique)
+  return unique.sort((a, b) => {
+    return unique[b] - tem[a]
+  })
+}
+```
+**19. Каждый элемент массива умножить на 2** <br>
+```javascript
+function multiplyByTwo (...restArgs) {
+   return restArgs.map(el => el*2)
+}
+```
+**20. КАРРИРОВАНИЕ для суммы** <br>
+```javascript
+function sum(a) {
+  return function(b) {
+    return a+b
+  }
+}
+```
+**21.SPREAD Остаточные параметры SPREAD** <br>
+```javscript
+function sumAll(...args) {
+  let sum = 0;
+
+  for (let arg of args) sum += arg;
+
+  return sum;
+}
+sumAll(1, 2) // 3
+```
+**22.REST Остаточные параметры REST** <br>
+```javscript
+const pizza = ['Pepperoni', 2222, 5, 6, 10, 30, 1];
+const [name, id, ...rest] = pizza;
+```
+## Что в будет в консоли
+**1. Что выведется** <br>
+```javascript
+var a = 5; //a = 5;
+funnction fn() { // a = undefined
+  if(a) {
+  concole.log(a);
+  var a = 10;
+  }
+}
+f(); // undefined
+```
+**1. Функция, которая выведет каждый раз значение++ (замыкание)** <br>
+```javascript 
+let inc = (function () {
+  let counter = 0;
+  return function () => {
+    counter + 1;
+  }
+ })()
+ inc() // 1
+ inc() // 2
+ 
+// ИЛИ
+ function counter() {
+	let i = 1;
+	return function() {return i++};
+}
+```
