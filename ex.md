@@ -231,6 +231,55 @@ sumAll(1, 2) // 3
 const pizza = ['Pepperoni', 2222, 5, 6, 10, 30, 1];
 const [name, id, ...rest] = pizza;
 ```
+**23. РЕКУРСИЯ ** <br>
+```javscript
+function fur(n) {
+if (n<=1) {
+	return n;	//сумма вхождений
+	} else {
+	return fn(n-1) + fn(n-2)	
+	}
+}
+```
+**24. ДЕСТРУКТУРИЗАЦИЯ REST** <br>
+```javscript
+const [firstName, ...otherInfo] = ["Anna", "Smith", "github"];
+
+console.log(firstName); // "Anna"
+console.log(otherInfo); // ["Smith", "github"]
+```
+**25. Таймер setInterval  ** <br>
+```javscript
+let timerId = setInterval(() => alert('tick'), 2000);
+```
+**26. Напишите функцию printNumbers(from, to), которая выводит число каждую секунду, начиная от from и заканчивая to. ** <br>
+```javscript
+function printNumbers(from, to) {
+  let current = from;
+
+  setTimeout(function go() {
+    alert(current);
+    if (current < to) {
+      setTimeout(go, 1000);
+    }
+    current++;
+  }, 1000);
+}
+
+function printNumbers(from, to) {
+  let current = from;
+
+  let timerId = setInterval(function() {
+    alert(current);
+    if (current == to) {
+      clearInterval(timerId);
+    }
+    current++;
+  }, 1000);
+}
+
+// printNumbers(5, 10);
+```
 ## Что в будет в консоли
 **1. Что выведется** <br>
 ```javascript
