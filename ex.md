@@ -216,7 +216,7 @@ function sum(a) {
 }
 ```
 **21.SPREAD Остаточные параметры SPREAD** <br>
-```javscript
+```javascript
 function sumAll(...args) {
   let sum = 0;
 
@@ -227,12 +227,12 @@ function sumAll(...args) {
 sumAll(1, 2) // 3
 ```
 **22.REST Остаточные параметры REST** <br>
-```javscript
+```javascript
 const pizza = ['Pepperoni', 2222, 5, 6, 10, 30, 1];
 const [name, id, ...rest] = pizza;
 ```
 **23. РЕКУРСИЯ ** <br>
-```javscript
+```javascript
 function fur(n) {
 if (n<=1) {
 	return n;	//сумма вхождений
@@ -242,18 +242,18 @@ if (n<=1) {
 }
 ```
 **24. ДЕСТРУКТУРИЗАЦИЯ REST** <br>
-```javscript
+```javascript
 const [firstName, ...otherInfo] = ["Anna", "Smith", "github"];
 
 console.log(firstName); // "Anna"
 console.log(otherInfo); // ["Smith", "github"]
 ```
 **25. Таймер setInterval  ** <br>
-```javscript
+```javascript
 let timerId = setInterval(() => alert('tick'), 2000);
 ```
 **26. Напишите функцию printNumbers(from, to), которая выводит число каждую секунду, начиная от from и заканчивая to. ** <br>
-```javscript
+```javascript
 function printNumbers(from, to) {
   let current = from;
 
@@ -280,6 +280,38 @@ function printNumbers(from, to) {
 
 // printNumbers(5, 10);
 ```
+**27. Таймер setInterval  ** <br>
+```javascript
+function count(n) {
+  for (let i = 0, arr = []; i < n; arr.push(++i));
+
+  return arr;
+}
+```
+**28. Рассчитать сумму позитивных и отрицательных чисел массива ([1, 2, 3, -1, -2] => [6, -3]) ** <br>
+```javascript
+function countPositivesSumNegatives(input) {
+  if (input === null || input.length === 0) {
+    return [];
+  }
+  let posCount = 0;
+  let negSum = 0;
+  for (let i = 0; i < input.length; i++) {
+     if (input[i] > 0) {
+      posCount++;
+    } else {
+      negSum += input[i];
+    }
+  }
+  return [posCount, negSum];
+}
+```
+**29. Создайте функцию, которая возвращает значение, умноженное на 50 и увеличенное на 6. Если введенное значение является строкой, оно должно возвращать "Error"** <br>
+```javascript
+const problem = x => typeof x === 'string' ? 'Error' : x * 50 + 6;
+```
+
+
 ## Что в будет в консоли
 **1. Что выведется** <br>
 ```javascript
