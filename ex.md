@@ -75,7 +75,7 @@ function solution(str) {
   return str.split('').reverse().join('')
 }
 ```
-**7. Написать функцию, которая принимать на вход число и заменяют любую цифру < 5 на 0, а цифру > 5 на 1 ('kebab' => 'babek')** <br>
+**7. Написать функцию, которая принимать на вход число и заменяют любую цифру < 5 на 0, а цифру > 5 на 1** <br>
 ```javascript
 function replace(x){
   return x.split('').map((num) => num > 4 ? 1 : 0).join('');
@@ -280,7 +280,7 @@ function printNumbers(from, to) {
 
 // printNumbers(5, 10);
 ```
-**27. Таймер setInterval  ** <br>
+**27.** <br>
 ```javascript
 function count(n) {
   for (let i = 0, arr = []; i < n; arr.push(++i));
@@ -310,8 +310,24 @@ function countPositivesSumNegatives(input) {
 ```javascript
 const problem = x => typeof x === 'string' ? 'Error' : x * 50 + 6;
 ```
-
-
+**30. Функция, которая делает fetch запрос, если не срабатывает, то еще 5 раз"** <br>
+```javascript
+function get(url) {
+  return fetch(url)
+    .then ((res) => {
+      return res.json();
+  })
+  .catch (function (err) {
+    if (counter > 0) {
+      counter--
+      return get(url)
+    } else {
+    console.log("Заданный URL недоступен")
+    }
+  })
+}
+var counter = 5;
+```
 ## Что в будет в консоли
 **1. Что выведется** <br>
 ```javascript
