@@ -328,6 +328,12 @@ function get(url) {
 }
 var counter = 5;
 ```
+**31. Вернуть средний элемент массива, если он нечетный (['css'] => 's' ), если четный ([html] => ''tm)"** <br>
+```javascript
+function getMiddle(s) {
+  return s.slice((s.length-1)/2, s.length/2+1);
+}
+```
 ## Что в будет в консоли
 **1. Что выведется** <br>
 ```javascript
